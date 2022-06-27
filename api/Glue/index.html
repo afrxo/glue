@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="generator" content="Docusaurus v2.0.0-beta.9">
+<title data-react-helmet="true">Glue | glue</title><meta data-react-helmet="true" property="og:title" content="Glue | glue"><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" name="description" content="The Glue Framework.
+
+	"><meta data-react-helmet="true" property="og:description" content="The Glue Framework.
+
+	"><meta data-react-helmet="true" property="og:url" content="https://afrxo.github.io/glue/api/Glue"><meta data-react-helmet="true" name="docusaurus_locale" content="en"><meta data-react-helmet="true" name="docusaurus_tag" content="default"><link data-react-helmet="true" rel="canonical" href="https://afrxo.github.io/glue/api/Glue"><link data-react-helmet="true" rel="alternate" href="https://afrxo.github.io/glue/api/Glue" hreflang="en"><link data-react-helmet="true" rel="alternate" href="https://afrxo.github.io/glue/api/Glue" hreflang="x-default"><link rel="stylesheet" href="/glue/assets/css/styles.302001c7.css">
+<link rel="preload" href="/glue/assets/js/runtime~main.136cf8df.js" as="script">
+<link rel="preload" href="/glue/assets/js/main.12701fc4.js" as="script">
+</head>
+<body>
+<script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
+<div><a href="#" class="skipToContent_1oUP">Skip to main content</a></div><nav class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Navigation bar toggle" class="navbar__toggle clean-btn" type="button" tabindex="0"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/glue/"><b class="navbar__title">glue</b></a><a class="navbar__item navbar__link" href="/glue/docs/intro">Docs</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/glue/api/">API</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/afrxo/glue" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link"><span>GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_3J9K"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></span></a><div class="toggle_71bT toggle_3Zt9 toggleDisabled_3cF-"><div class="toggleTrack_32Fl" role="button" tabindex="-1"><div class="toggleTrackCheck_3lV7"><span class="toggleIcon_O4iE">🌜</span></div><div class="toggleTrackX_S2yS"><span class="toggleIcon_O4iE">🌞</span></div><div class="toggleTrackThumb_xI_Z"></div></div><input type="checkbox" class="toggleScreenReader_28Tw" aria-label="Switch between dark and light mode"></div><div class="navbar__search"><span aria-label="expand searchbar" role="button" class="search-icon" tabindex="0"></span><input type="search" id="search_input_react" placeholder="Press S to Search..." aria-label="Search" class="navbar__search-input search-bar"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div class="main-wrapper docPageContainer_2Kz0"><div class="docPage_1bdk"><div class="docSidebarContainer_1ykS"><div class="sidebar_15mo"><nav class="menu thin-scrollbar menu_Bmed"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/glue/api/Glue">​Glue</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/glue/api/Network">​Network</a></li></ul></nav><button type="button" title="Collapse sidebar" aria-label="Collapse sidebar" class="button button--secondary button--outline collapseSidebarButton_1CGd"><svg width="20" height="20" aria-hidden="true" class="collapseSidebarButtonIcon_3E-R"><g fill="#7a7a7a"><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"></path><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"></path></g></svg></button></div></div><main class="docMainContainer_28N5"><div class="container padding-vert--lg"><div class="row"><div class="col docItemCol_3WPG"><div class="docItemContainer_3XDu"><article><div class="member_qHIL markdown"><div class="tocCollapsible_1PrD theme-doc-toc-mobile tocMobile_3ryM"><button type="button" class="clean-btn tocCollapsibleButton_2O1e">On this page</button></div><header><h1 class="docTitle_1ddc" style="text-decoration:none"><span style="display:inline-block">Glue</span></h1><div class="luaClassTags_2Zrs"></div><div>
+<p>The Glue Framework.</p>
+</div></header><h2 class="anchor anchorWithStickyNavbar_31ik" id="types">Types<a aria-hidden="true" class="hash-link" href="#types" title="Direct link to heading">​</a></h2><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="Provider"><code style="text-decoration:none">Provider</code><a aria-hidden="true" class="hash-link" href="#Provider" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/afrxo/glue/blob/master/src/types.lua#L105"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code class="purple__nFc">interface</code> <code>Provider<!-- --> <!-- -->{</code><div class="inset_2cJr"><div><code>Name<!-- -->: </code><code class="blue_2Afy">string</code></div><div><code>onConfig:<!-- -->: </code><code class="purple__nFc">(</code><code class="green_3LnD">(</code><div class="inset_2cJr"><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/glue/api/Glue#Provider">Provider</a></code><code class="green_3LnD">,</code></div><div class="inset_2cJr"><code>bindTo<!-- -->: </code><code class="yellow_1WGw">(</code><code class="blue_2Afy">string</code><code class="yellow_1WGw">)</code><code class="yellow_1WGw"> → </code><code class="yellow_1WGw">(</code><code class="yellow_1WGw">)</code><code class="green_3LnD">,</code></div><div class="inset_2cJr"><code>createBinding<!-- -->: </code><code class="yellow_1WGw">(</code><code class="yellow_1WGw">)</code><code class="yellow_1WGw"> → </code><code class="yellow_1WGw">(</code><code class="yellow_1WGw">)</code></div><code class="green_3LnD">)</code><code class="green_3LnD"> → </code><code class="green_3LnD">(</code><code class="green_3LnD">)</code><code class="purple__nFc">)</code><code class="blue_2Afy">?,</code></div><div><code>onCreate<!-- -->: </code><code class="purple__nFc">(</code><code class="green_3LnD">(</code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/glue/api/Glue#Provider">Provider</a></code><code class="green_3LnD">)</code><code class="green_3LnD"> → </code><code class="green_3LnD">(</code><code class="green_3LnD">)</code><code class="purple__nFc">)</code><code class="blue_2Afy">?</code></div><div><code>onStart<!-- -->: </code><code class="purple__nFc">(</code><code class="green_3LnD">(</code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/glue/api/Glue#Provider">Provider</a></code><code class="green_3LnD">)</code><code class="green_3LnD"> → </code><code class="green_3LnD">(</code><code class="green_3LnD">)</code><code class="purple__nFc">)</code><code class="blue_2Afy">?</code></div><div><code>onTick<!-- -->: </code><code class="purple__nFc">(</code><code class="green_3LnD">(</code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/glue/api/Glue#Provider">Provider</a></code><code class="green_3LnD">)</code><code class="green_3LnD"> → </code><code class="green_3LnD">(</code><code class="green_3LnD">)</code><code class="purple__nFc">)</code><code class="blue_2Afy">?</code></div><div><code>onRender<!-- -->: </code><code class="purple__nFc">(</code><code class="green_3LnD">(</code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/glue/api/Glue#Provider">Provider</a></code><code class="green_3LnD">)</code><code class="green_3LnD"> → </code><code class="green_3LnD">(</code><code class="green_3LnD">)</code><code class="purple__nFc">)</code><code class="blue_2Afy">?</code></div></div><code>}</code></div><div></div><h2 class="anchor anchorWithStickyNavbar_31ik" id="properties">Properties<a aria-hidden="true" class="hash-link" href="#properties" title="Direct link to heading">​</a></h2><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="Version"><code style="text-decoration:none">Version</code><a aria-hidden="true" class="hash-link" href="#Version" title="Direct link to heading">​</a></h3><span class="badge_3ZFo" style="color:#e74c3c"><span class="badgeTooltip_2qiw">This item is read only and cannot be modified.</span><span class="badgeToolTipTail_2yaQ"><svg xmlns="http://www.w3.org/2000/svg" height="300px" width="300px" fill="#e74c3c" x="0px" y="0px" viewBox="0 0 96 96"><path d="M70.354,15.662h-7.496H25.566c-3.282,0-5.19-0.776-5.728-1.169v-1.456c0.538-0.393,2.445-1.168,5.728-1.168h46.479V8H25.566  c-4.776,0-9.594,1.468-9.594,4.747v61.458C15.972,86.645,20.328,88,37.495,88h42.535V15.662H70.354z"></path></svg> <!-- -->Read Only</span></span><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/afrxo/glue/blob/master/src/init.lua#L73"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Glue<!-- -->.<!-- -->Version<!-- -->:<!-- --> </code> <code class="blue_2Afy">string</code></div><div>
+<p>The current version of Glue.</p>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="Network"><code style="text-decoration:none">Network</code><a aria-hidden="true" class="hash-link" href="#Network" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/afrxo/glue/blob/master/src/init.lua#L129"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Glue<!-- -->.<!-- -->Network<!-- -->:<!-- --> </code> <code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/glue/api/Network">Network</a></code></div><div>
+<p>The Glue Network library.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> Event <span class="token operator">=</span> Network<span class="token punctuation">.</span><span class="token function">Event</span><span class="token punctuation">(</span><span class="token string">"ExampelEvent"</span><span class="token punctuation">)</span>
+
+Event<span class="token punctuation">:</span><span class="token function">OnEvent</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>Player<span class="token punctuation">:</span> Player<span class="token punctuation">)</span>
+	<span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Ping"</span><span class="token punctuation">)</span>
+	Event<span class="token punctuation">:</span><span class="token function">Fire</span><span class="token punctuation">(</span>Player<span class="token punctuation">)</span>
+<span class="token keyword">end</span><span class="token punctuation">)</span>
+</code></pre>
+<hr>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> Signal <span class="token operator">=</span> Network<span class="token punctuation">.</span><span class="token function">Event</span><span class="token punctuation">(</span><span class="token string">"ExampleSignal"</span><span class="token punctuation">)</span>
+
+Signal<span class="token punctuation">:</span><span class="token function">OnEvent</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Pong"</span><span class="token punctuation">)</span>
+<span class="token keyword">end</span><span class="token punctuation">)</span>
+
+Signal<span class="token punctuation">:</span><span class="token function">Fire</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="LocalPlayer"><code style="text-decoration:none">LocalPlayer</code><a aria-hidden="true" class="hash-link" href="#LocalPlayer" title="Direct link to heading">​</a></h3><span class="badge_3ZFo" style="color:#e74c3c"><span class="badgeTooltip_2qiw">This item is read only and cannot be modified.</span><span class="badgeToolTipTail_2yaQ"><svg xmlns="http://www.w3.org/2000/svg" height="300px" width="300px" fill="#e74c3c" x="0px" y="0px" viewBox="0 0 96 96"><path d="M70.354,15.662h-7.496H25.566c-3.282,0-5.19-0.776-5.728-1.169v-1.456c0.538-0.393,2.445-1.168,5.728-1.168h46.479V8H25.566  c-4.776,0-9.594,1.468-9.594,4.747v61.458C15.972,86.645,20.328,88,37.495,88h42.535V15.662H70.354z"></path></svg> <!-- -->Read Only</span></span><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/afrxo/glue/blob/master/src/init.lua#L161"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Glue<!-- -->.<!-- -->LocalPlayer<!-- -->:<!-- --> </code> <code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Player" target="_blank" rel="noopener noreferrer">Player<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code></div><div></div><h2 class="anchor anchorWithStickyNavbar_31ik" id="functions">Functions<a aria-hidden="true" class="hash-link" href="#functions" title="Direct link to heading">​</a></h2><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="Import"><code style="text-decoration:none">Import</code><a aria-hidden="true" class="hash-link" href="#Import" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/afrxo/glue/blob/master/src/init.lua#L86"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Glue<!-- -->.</code><code class="green_3LnD">Import</code><code>(</code><code>Target<!-- -->: </code><code class="blue_2Afy">string</code><code class="op_1JtD"> | </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/ModuleScript" target="_blank" rel="noopener noreferrer">ModuleScript<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Imports a package found in the paths specified in <code>GlueConfig</code>.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> MakeHello <span class="token operator">=</span> Glue<span class="token punctuation">.</span><span class="token function">Import</span><span class="token punctuation">(</span><span class="token string">"MakeHello"</span><span class="token punctuation">)</span>
+<span class="token function">MakeHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="loader"><code style="text-decoration:none">loader</code><a aria-hidden="true" class="hash-link" href="#loader" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/afrxo/glue/blob/master/src/init.lua#L101"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Glue<!-- -->.</code><code class="green_3LnD">loader</code><code>(</code><div class="inset_2cJr"><div><code>Target<!-- -->: </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code></div><div><code>Seperator<!-- -->: </code><code class="blue_2Afy">string?</code></div></div><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Creates a module loader for the specified target.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> require <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span>game<span class="token punctuation">:</span><span class="token function">GetService</span><span class="token punctuation">(</span><span class="token string">"ReplicatedStorage"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Glue<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">loader</span><span class="token punctuation">(</span>script<span class="token punctuation">)</span>
+
+<span class="token keyword">local</span> Util <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"Util"</span><span class="token punctuation">)</span>
+</code></pre>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="Provider"><code style="text-decoration:none">Provider</code><a aria-hidden="true" class="hash-link" href="#Provider" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/afrxo/glue/blob/master/src/init.lua#L153"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Glue<!-- -->.</code><code class="green_3LnD">Provider</code><code>(</code><div class="inset_2cJr"><div><code>Name<!-- -->: </code><code class="blue_2Afy">string</code><code>,</code></div><div><code>ProviderData<!-- -->: </code><code class="blue_2Afy">Map</code><code class="op_1JtD">&lt;</code><code class="blue_2Afy">any</code><code class="op_1JtD">&gt;</code><code class="blue_2Afy">?</code></div></div><code>) → </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/glue/api/Glue#Provider">Provider</a></code></div><div>
+<p>Creates a Provider.</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> ExampleProvider <span class="token operator">=</span> Glue<span class="token punctuation">.</span><span class="token function">Provider</span><span class="token punctuation">(</span><span class="token string">"ExampleProvider"</span><span class="token punctuation">)</span>
+
+<span class="token keyword">function</span> ExampleProvider<span class="token punctuation">:</span><span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"I have been initialized!"</span><span class="token punctuation">)</span>
+<span class="token keyword">end</span>
+
+<span class="token keyword">function</span> ExampleProvider<span class="token punctuation">:</span><span class="token function">onStart</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"I have been started!"</span><span class="token punctuation">)</span>
+<span class="token keyword">end</span>
+
+<span class="token keyword">return</span> ExampleProvider
+</code></pre>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="GetProvider"><code style="text-decoration:none">GetProvider</code><a aria-hidden="true" class="hash-link" href="#GetProvider" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/afrxo/glue/blob/master/src/init.lua#L174"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Glue<!-- -->.</code><code class="green_3LnD">GetProvider</code><code>(</code><code>Name<!-- -->: </code><code class="blue_2Afy">string</code><code>) → </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/glue/api/Glue#Provider">Provider?</a></code></div><div>
+<p>Fetches a Provider by name.</p>
+<div class="admonition admonition-caution alert alert--warning">
+  <div class="admonition-heading">
+    <h5><span class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+          <path d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path>
+        </svg></span>caution</h5>
+  </div>
+  <div class="admonition-content">
+    <pre><code>Providers can only be fetched after all Providers have been initialized.
+</code></pre>
+  </div>
+</div>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="loadLibrary"><code style="text-decoration:none">loadLibrary</code><a aria-hidden="true" class="hash-link" href="#loadLibrary" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/afrxo/glue/blob/master/src/init.lua#L187"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Glue<!-- -->.</code><code class="green_3LnD">loadLibrary</code><code>(</code><code>Name<!-- -->: </code><code class="blue_2Afy">string</code><code>) → </code><code class="blue_2Afy">Math</code><code class="op_1JtD"> | </code><code class="blue_2Afy">NetValue</code><code class="op_1JtD"> | </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/glue/api/Network">Network</a></code><code class="op_1JtD"> | </code><code class="blue_2Afy">State</code><code class="op_1JtD"> | </code><code class="blue_2Afy">Thread</code><code class="op_1JtD"> | </code><code class="blue_2Afy">Promise</code></div><div></div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="Imports"><code style="text-decoration:none">Imports</code><a aria-hidden="true" class="hash-link" href="#Imports" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/afrxo/glue/blob/master/src/init.lua#L203"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Glue<!-- -->.</code><code class="green_3LnD">Imports</code><code>(</code><code>ImportPaths<!-- -->: </code><code class="blue_2Afy">Array</code><code class="op_1JtD">&lt;</code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="op_1JtD">&gt;</code><code class="op_1JtD"> | </code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Sets the paths to search for packages.</p>
+<pre class="language-lua"><code class="language-lua">Glue<span class="token punctuation">.</span><span class="token function">Imports</span> <span class="token punctuation">{</span> ReplicatedStorage<span class="token punctuation">.</span>Shared<span class="token punctuation">,</span> ServerScriptService<span class="token punctuation">.</span>Modules <span class="token punctuation">}</span>
+</code></pre>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="Extensions"><code style="text-decoration:none">Extensions</code><a aria-hidden="true" class="hash-link" href="#Extensions" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/afrxo/glue/blob/master/src/init.lua#L227"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Glue<!-- -->.</code><code class="green_3LnD">Extensions</code><code>(</code><code>extensions<!-- -->: </code><code class="purple__nFc">{</code><span><code>[</code><code class="blue_2Afy">string</code><code>]</code></span><code>: </code><code class="green_3LnD">(</code><code class="blue_2Afy"><a style="text-decoration:underline;color:inherit" href="/glue/api/Glue#Provider">Provider</a></code><code class="green_3LnD">)</code><code class="green_3LnD"> → </code><code class="green_3LnD">(</code><code class="green_3LnD">)</code><code class="purple__nFc">}</code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Configures the extensions to use.</p>
+<pre class="language-lua"><code class="language-lua">Glue<span class="token punctuation">.</span><span class="token function">Extensions</span> <span class="token punctuation">{</span>
+	<span class="token punctuation">[</span><span class="token string">"beforeCreate"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>Provider<span class="token punctuation">)</span>
+		<span class="token function">print</span><span class="token punctuation">(</span>Provider<span class="token punctuation">.</span>Name <span class="token operator">..</span> <span class="token string">" beforeCreate"</span><span class="token punctuation">)</span>
+	<span class="token keyword">end</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="Stick"><code style="text-decoration:none">Stick</code><a aria-hidden="true" class="hash-link" href="#Stick" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/afrxo/glue/blob/master/src/init.lua#L249"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Glue<!-- -->.</code><code class="green_3LnD">Stick</code><code>(</code><code>) → </code><code class="blue_2Afy">Promise</code></div><div>
+<p>Starts the Glue Framework.</p>
+<pre class="language-lua"><code class="language-lua">Glue<span class="token punctuation">.</span><span class="token function">Stick</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token function">catch</span><span class="token punctuation">(</span>warn<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token function">andThen</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Glue started!"</span><span class="token punctuation">)</span>
+<span class="token keyword">end</span><span class="token punctuation">)</span>
+</code></pre>
+</div><div class="divider_3z1R"></div><h3 class="anchor anchorWithStickyNavbar_31ik" id="OnStick"><code style="text-decoration:none">OnStick</code><a aria-hidden="true" class="hash-link" href="#OnStick" title="Direct link to heading">​</a></h3><div class="repositoryDetailsContainer_1UH0"><a class="sourceButton_2aE5" href="https://github.com/afrxo/glue/blob/master/src/init.lua#L273"><div class="sourceButtonText_monK">&lt;/&gt;</div></a></div><div class="memberString_P8-X"><code>Glue<!-- -->.</code><code class="green_3LnD">OnStick</code><code>(</code><code>) → </code><code class="blue_2Afy">Promise</code></div><div>
+<p>Returns a Promise that yields until the Glue Pipeline has started.</p>
+<pre class="language-lua"><code class="language-lua">Glue<span class="token punctuation">.</span><span class="token function">OnStick</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token function">andThen</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Glue started!"</span><span class="token punctuation">)</span>
+<span class="token keyword">end</span><span class="token punctuation">)</span>
+</code></pre>
+</div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
+    &quot;functions&quot;: [
+        {
+            &quot;name&quot;: &quot;Import&quot;,
+            &quot;desc&quot;: &quot;Imports a package found in the paths specified in `GlueConfig`.\n\n```lua\nlocal MakeHello = Glue.Import(\&quot;MakeHello\&quot;)\nMakeHello()\n```\n\t&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;Target&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;string | ModuleScript&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 86,
+                &quot;path&quot;: &quot;src/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;loader&quot;,
+            &quot;desc&quot;: &quot;Creates a module loader for the specified target.\n\n```lua\nlocal require = require(game:GetService(\&quot;ReplicatedStorage\&quot;).Glue).loader(script)\n\nlocal Util = require(\&quot;Util\&quot;)\n```\n\t&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;Target&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Instance&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;Seperator&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;string?&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 101,
+                &quot;path&quot;: &quot;src/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;Provider&quot;,
+            &quot;desc&quot;: &quot;Creates a Provider.\n\n```lua\nlocal ExampleProvider = Glue.Provider(\&quot;ExampleProvider\&quot;)\n\nfunction ExampleProvider:onCreate()\n\tprint(\&quot;I have been initialized!\&quot;)\nend\n\nfunction ExampleProvider:onStart()\n\tprint(\&quot;I have been started!\&quot;)\nend\n\nreturn ExampleProvider\n```\n\t&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;Name&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;string&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;ProviderData&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Map&lt;any&gt;?&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Provider&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 153,
+                &quot;path&quot;: &quot;src/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;GetProvider&quot;,
+            &quot;desc&quot;: &quot;Fetches a Provider by name.\n\n:::caution\n\tProviders can only be fetched after all Providers have been initialized.\n:::\n\n\t&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;Name&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;string&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Provider?&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 174,
+                &quot;path&quot;: &quot;src/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;loadLibrary&quot;,
+            &quot;desc&quot;: &quot;\t&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;Name&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;string&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Math | NetValue | Network | State | Thread | Promise&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 187,
+                &quot;path&quot;: &quot;src/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;Imports&quot;,
+            &quot;desc&quot;: &quot;Sets the paths to search for packages.\n\n```lua\nGlue.Imports { ReplicatedStorage.Shared, ServerScriptService.Modules }\n```\n\n\t&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;ImportPaths&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Array&lt;Instance&gt; | Instance&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 203,
+                &quot;path&quot;: &quot;src/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;Extensions&quot;,
+            &quot;desc&quot;: &quot;Configures the extensions to use.\n\n```lua\nGlue.Extensions {\n\t[\&quot;beforeCreate\&quot;] = function(Provider)\n\t\tprint(Provider.Name .. \&quot; beforeCreate\&quot;)\n\tend\n}\n```\n\n\t&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;extensions&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;{[string]: (Provider) -&gt; ()}&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 227,
+                &quot;path&quot;: &quot;src/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;Stick&quot;,
+            &quot;desc&quot;: &quot;Starts the Glue Framework.\n\n```lua\nGlue.Stick():catch(warn):andThen(function()\n\tprint(\&quot;Glue started!\&quot;)\nend)\n```\n\n\t&quot;,
+            &quot;params&quot;: [],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Promise&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 249,
+                &quot;path&quot;: &quot;src/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;OnStick&quot;,
+            &quot;desc&quot;: &quot;Returns a Promise that yields until the Glue Pipeline has started.\n\n```lua\nGlue.OnStick():andThen(function()\n\tprint(\&quot;Glue started!\&quot;)\nend)\n```\n\n\t&quot;,
+            &quot;params&quot;: [],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Promise&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 273,
+                &quot;path&quot;: &quot;src/init.lua&quot;
+            }
+        }
+    ],
+    &quot;properties&quot;: [
+        {
+            &quot;name&quot;: &quot;Version&quot;,
+            &quot;desc&quot;: &quot;The current version of Glue.\n\n\t&quot;,
+            &quot;lua_type&quot;: &quot;string&quot;,
+            &quot;readonly&quot;: true,
+            &quot;source&quot;: {
+                &quot;line&quot;: 73,
+                &quot;path&quot;: &quot;src/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;Network&quot;,
+            &quot;desc&quot;: &quot;The Glue Network library.\n\n```lua\nlocal Event = Network.Event(\&quot;ExampelEvent\&quot;)\n\nEvent:OnEvent(function(Player: Player)\n\tprint(\&quot;Ping\&quot;)\n\tEvent:Fire(Player)\nend)\n```\n---\n```lua\nlocal Signal = Network.Event(\&quot;ExampleSignal\&quot;)\n\nSignal:OnEvent(function()\n\tprint(\&quot;Pong\&quot;)\nend)\n\nSignal:Fire()\n```\n\n\t&quot;,
+            &quot;lua_type&quot;: &quot;Network&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 129,
+                &quot;path&quot;: &quot;src/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;LocalPlayer&quot;,
+            &quot;desc&quot;: &quot;\t&quot;,
+            &quot;lua_type&quot;: &quot;Player&quot;,
+            &quot;readonly&quot;: true,
+            &quot;source&quot;: {
+                &quot;line&quot;: 161,
+                &quot;path&quot;: &quot;src/init.lua&quot;
+            }
+        }
+    ],
+    &quot;types&quot;: [
+        {
+            &quot;name&quot;: &quot;Provider&quot;,
+            &quot;desc&quot;: &quot;&quot;,
+            &quot;fields&quot;: [
+                {
+                    &quot;name&quot;: &quot;Name&quot;,
+                    &quot;lua_type&quot;: &quot;string&quot;,
+                    &quot;desc&quot;: &quot;&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;onConfig:&quot;,
+                    &quot;lua_type&quot;: &quot;((Provider, bindTo: (string) -&gt; (), createBinding: () -&gt; ()) -&gt; ())?,&quot;,
+                    &quot;desc&quot;: &quot;&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;onCreate&quot;,
+                    &quot;lua_type&quot;: &quot;((Provider) -&gt; ())?&quot;,
+                    &quot;desc&quot;: &quot;&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;onStart&quot;,
+                    &quot;lua_type&quot;: &quot;((Provider) -&gt; ())?&quot;,
+                    &quot;desc&quot;: &quot;&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;onTick&quot;,
+                    &quot;lua_type&quot;: &quot;((Provider) -&gt; ())?&quot;,
+                    &quot;desc&quot;: &quot;&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;onRender&quot;,
+                    &quot;lua_type&quot;: &quot;((Provider) -&gt; ())?&quot;,
+                    &quot;desc&quot;: &quot;&quot;
+                }
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 105,
+                &quot;path&quot;: &quot;src/types.lua&quot;
+            }
+        }
+    ],
+    &quot;name&quot;: &quot;Glue&quot;,
+    &quot;desc&quot;: &quot;The Glue Framework.\n\n\t&quot;,
+    &quot;source&quot;: {
+        &quot;line&quot;: 63,
+        &quot;path&quot;: &quot;src/init.lua&quot;
+    }
+}</pre></details></div><div class="col col--3"><div class="tableOfContents_35-E thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a><ul><li><a href="#Provider" class="table-of-contents__link toc-highlight">Provider</a></li></ul></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a><ul><li><a href="#LocalPlayer" class="table-of-contents__link toc-highlight">LocalPlayer</a></li><li><a href="#Network" class="table-of-contents__link toc-highlight">Network</a></li><li><a href="#Version" class="table-of-contents__link toc-highlight">Version</a></li></ul></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#Extensions" class="table-of-contents__link toc-highlight">.Extensions</a></li><li><a href="#GetProvider" class="table-of-contents__link toc-highlight">.GetProvider</a></li><li><a href="#Import" class="table-of-contents__link toc-highlight">.Import</a></li><li><a href="#Imports" class="table-of-contents__link toc-highlight">.Imports</a></li><li><a href="#loader" class="table-of-contents__link toc-highlight">.loader</a></li><li><a href="#loadLibrary" class="table-of-contents__link toc-highlight">.loadLibrary</a></li><li><a href="#OnStick" class="table-of-contents__link toc-highlight">.OnStick</a></li><li><a href="#Provider" class="table-of-contents__link toc-highlight">.Provider</a></li><li><a href="#Stick" class="table-of-contents__link toc-highlight">.Stick</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2022 afrxo. Built with Moonwave and Docusaurus.</div></div></div></footer></div>
+<script src="/glue/assets/js/runtime~main.136cf8df.js"></script>
+<script src="/glue/assets/js/main.12701fc4.js"></script>
+</body>
+</html>
