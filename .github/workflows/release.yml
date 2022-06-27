@@ -45,9 +45,6 @@ jobs:
       - name: Set Version
         id: set_version
         run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
-
-      - name: Generate Changelog
-        run: git log --oneline > CHANGELOG.md
         
       - name: Publish Github Release
         uses: softprops/action-gh-release@v1
