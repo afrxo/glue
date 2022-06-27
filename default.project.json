@@ -1,0 +1,9 @@
+{
+  "name": "Packages",
+  "tree": {
+      "$path": "src/Packages",
+      "Glue": {
+          "$path": "src"
+      }
+  }
+}

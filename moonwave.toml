@@ -1,0 +1,23 @@
+gitRepoUrl = "https://github.com/afrxo/glue"
+gitSourceBranch = "master"
+changelog = true
+
+classOrder = [
+    "Glue"
+]
+
+[home]
+enabled = true
+includeReadme = true
+
+[docusaurus]
+tagline = "An opinionated game framework for Roblox."
+organizationName = "afrxo"
+projectName = "Glue"
+url = "https://afrxo.github.io"
+baseUrl = "/glue/"
+
+[[home.features]]
+title = "Rich API"
+description = "The Glue API consists of various modules and functions that assist the developer in writing less code and focus on whats important. Glue API will always add more functionality to your code, rather than regressing it."
+

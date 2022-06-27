@@ -1,0 +1,15 @@
+[package]
+name = "afrxo/glue"
+version = "5.0.0"
+license = "MIT"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+exclude = ["src/wally.toml"]
+
+[dependencies]
+Promise = "evaera/promise@4.0.0"
+Components = "afrxo/components@^1"
+Math = "afrxo/math@^1"
+NetValue = "afrxo/netvalue@^1"
+State = "afrxo/state@1.1.0"
+Thread = "afrxo/thread@^1"

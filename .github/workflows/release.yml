@@ -1,0 +1,57 @@
+name: Github Release
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+    
+jobs:
+  build:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '12.x'
+
+      - name: Install Node Dependencies
+        run: npm install
+
+      - name: Install Foreman Tools
+        uses: Roblox/setup-foreman@v1
+        with:
+          version: "^1.0.0"
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install Wally Dependencies
+        run: wally install --project-path src
+
+      - name: Build Glue Bundle
+        run: rojo build bundle.project.json -o Bundle.rbxl
+
+      - name: Build Glue Model
+        run: remodel run build.lua 
+
+      - name: Upload Asset File
+        run: node upload.js $ROBLOSECURITY
+        env:
+          ROBLOSECURITY: ${{ secrets.ROBLOSECURITY }}
+
+      - name: Set Version
+        id: set_version
+        run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
+
+      - name: Generate Changelog
+        run: git log
+        
+      - name: Publish Github Release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: Release ${{ steps.set_version.outputs.VERSION }}
+          files: Glue.rbxm
+

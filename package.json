@@ -1,0 +1,32 @@
+{
+  "name": "glue",
+  "version": "1.0.0",
+  "description": "[![Deploy Docs](https://github.com/afrxo/glue/actions/workflows/docs.yml/badge.svg)](https://github.com/afrxo/glue/actions/workflows/docs.yml)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afrxo/Glue.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/afrxo/Glue/issues"
+  },
+  "homepage": "https://github.com/afrxo/Glue#readme",
+  "dependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "fs": "^0.0.1-security",
+    "noblox.js": "^4.13.1"
+  },
+  "devDependencies": {
+    "husky": "^8.0.0"
+  },
+  "scripts": {
+    "prepare": "husky install"
+  }
+}

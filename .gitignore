@@ -1,0 +1,12 @@
+
+# Wally Dependencies
+Packages
+# NPM Dependencies
+node_modules
+
+# Roblox Files
+*.rbxl
+*.rbxm
+
+wally.lock
+.DS_Store

@@ -1,0 +1,12 @@
+{
+    "name": "bundle",
+    "tree": {
+        "$className": "DataModel",
+        "ReplicatedStorage": {
+            "$className": "ReplicatedStorage",
+            "Bundle": {
+                "$path": "default.project.json"
+            }
+        }
+    }
+}
