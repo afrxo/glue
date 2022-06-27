@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Packages
 
-Glue strives for faster development, which its module-loader achieves. [Glue.Import](https://afrxo.github.io/glue/api/Glue#Import) searches for and imports modules from Glue's [Packages](configuration.md#packages) configuration. Here's an example.
+Glue strives for faster development, which its module-loader achieves. [Glue.Import](https://afrxo.github.io/glue/api/Glue#Import) searches for and imports modules from Glue's Imports configuration. Here's an example.
 
 1. **MakeHello** `ReplicatedStorage/Shared/MakeHello.lua`
 ```lua
