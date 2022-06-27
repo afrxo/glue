@@ -47,11 +47,12 @@ jobs:
         run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
 
       - name: Generate Changelog
-        run: git log
+        run: git log --oneline > CHANGELOG.md
         
       - name: Publish Github Release
         uses: softprops/action-gh-release@v1
         with:
           name: Release ${{ steps.set_version.outputs.VERSION }}
+          body: CHANGELOG.md
           files: Glue.rbxm
 
