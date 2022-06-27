@@ -1,3 +1,7 @@
+---
+sidebar_position: 6
+---
+
 # Services
 
 Services are tables that expose a public API for Providers. Services allow for you to keep providers self contained and secure. Why do we need Services? Lets take a look at an example:

@@ -14,4 +14,3 @@ Glue is inspired by [Knit](https://sleitnick.github.io/Knit) and [Nevermore](htt
 
 * Follow the [installation guide](install.md) to install Glue.
 * Follow the [tour](basics.md) for a brief introduction to Glue.
-* See [terminology](Guides/terminology.md) for foreign definitions used in the documentation.

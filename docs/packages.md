@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 4
 ---
 
 # Packages
@@ -19,9 +19,7 @@ local Glue = require(game:GetService("ReplicatedStorage").Glue)
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-Glue.SetConfig({
-    Packages = ReplicatedStorage.Shared
-})
+Glue.Imports(ReplicatedStorage.Shared)
 
 local MakeHello = Glue.Import("Shared/MakeHello")
 MakeHello() -- Hello!
