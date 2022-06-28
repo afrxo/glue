@@ -1,5 +1,6 @@
 [package]
 name = "afrxo/glue"
+description = "Another game framework."
 version = "5.0.1"
 license = "MIT"
 registry = "https://github.com/UpliftGames/wally-index"
