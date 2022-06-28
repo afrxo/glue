@@ -7,7 +7,7 @@ local Manager = require(script.Parent.glueManager)
 
 local function Import(Target: (string | Instance))
 	if (type(Target) == "string") then
-		local ImportPaths = Manager:GetPackageImportPaths()
+		local ImportPaths = Manager.GetImportPaths()
 		for _, Path: Instance in ipairs(ImportPaths) do
 			local Module = GlueUtil.getInstance(string.format("%s.%s", Path:GetFullName(), Target:gsub("/", ".")))
 			if (Module) then
