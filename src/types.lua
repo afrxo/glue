@@ -154,8 +154,8 @@ export type Glue = {
 	loader: (Target: Instance, Seperator: string?) -> ((Path: string) -> any),
 	loadLibrary: MathLoader & StateLoader & ThreadLoader & NetValueLoader & ComponentsLoader,
 	Provider: <T>(ProviderDefinition: T) -> Provider & T,
-	Extensions: ({ [string]: ((Provider) -> ()) }) -> (),
-	Imports: ({ Instance } | Instance) -> (),
+	Extensions: (Extensions: { [string]: ((Provider) -> ()) }) -> (),
+	Imports: (Paths: { Instance } | Instance) -> (),
 }
 
 return 1
