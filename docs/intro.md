@@ -18,7 +18,7 @@ local Glue = require(game:GetService("ReplicatedStorage").Glue)
 Glue.Stick():catch(warn)
 ```
     
-### Creating a Provider
+### Execution Model
 
 Providers have two built-in lifecycle methods: `onCreate` & `onStart`
 
@@ -27,6 +27,8 @@ Providers have two built-in lifecycle methods: `onCreate` & `onStart`
 ```
 Glue.Stick -> Provider.onCreate & yield -> Provider.onStart -> Glue.OnStick
 ```
+
+### Creating a Provider
 
 Here is the simplest example of creating a provider:
 
