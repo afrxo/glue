@@ -9,13 +9,13 @@ Here are some VSCode snippets.
 ## Glue
 
 ```lua
-local Glue = require(game:GetService('ReplicatedStorage').Glue)
+local Glue = require(game:GetService('ReplicatedStorage').Packages.Glue)
 ```
 
 ```json
 "Glue": {
 	"prefix": "glue",
-	"body": "local Glue = require(game:GetService('ReplicatedStorage').Glue)",
+	"body": "local Glue = require(game:GetService('ReplicatedStorage').Packages.Glue)",
     "description": "Require Glue."
 }
 ```
@@ -49,7 +49,6 @@ return Provider
     "description": "Create a Provider."
 }
 ```
-
 
 ## Get Provider
 
