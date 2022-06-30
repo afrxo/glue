@@ -3,6 +3,8 @@ name: Deploy Docs
 on:
   workflow_dispatch:
   push:
+    paths:
+      - '**.md'
     branches:
       - master
 
@@ -15,7 +17,6 @@ jobs:
   build-and-deploy:
     concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
     runs-on: ubuntu-latest
-    if: ${{ startsWith(github.event.head_commit.message, 'docs') }}
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
