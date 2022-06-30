@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[742],{63891:e=>{e.exports=JSON.parse('{"sourceUrl":"https://github.com/afrxo/glue/blob/master","baseUrl":"/glue/","classOrder":["Glue"],"apiCategories":[]}')}}]);
