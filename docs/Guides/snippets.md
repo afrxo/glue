@@ -50,19 +50,6 @@ return Provider
 }
 ```
 
-## Hook
-
-```lua
-local Hook = Glue.Hook('Hook')
-```
-
-```json
-"Glue Hook": {
-    "prefix": ["hook"],
-    "body": ["local ${1:Name} = Glue.Hook('${1:Name}')"],
-    "description": "Create a Hook."
-}
-```
 
 ## Get Provider
 
