@@ -30,13 +30,13 @@ Glue.Stick -> Provider.onCreate & yield -> Provider.onStart -> Glue.OnStick
 
 ### Creating a Provider
 
-Here is the simplest example of creating a provider:
+Here is how to create and start provider:
 
 ```lua
 local Glue = require(game:GetService("ReplicatedStorage").Glue)
 
 -- Creating the Provider
-local ExampleProvider = Glue.Provider("ExampleProvider")
+local ExampleProvider = Glue.Provider( { Name = "ExampleProvider" } )
 
 -- Attaching the onCreate lifeycle method
 function ExampleProvider:onCreate()
