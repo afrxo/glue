@@ -95,7 +95,7 @@ local function attachProviderBindings()
                             --> Check if binding is implemented
                             if (table.find(anotherBinding.index, Provider.Name)) then
 								--> Check if implementation exists
-								if (type(rawget(anotherBinding.Provider[Key])) == "function") then
+								if (type(rawget(anotherBinding.Provider, Key)) == "function") then
 									task.spawn(anotherBinding.Provider[Key], anotherBinding.Provider, ...)
 								end
                             end
