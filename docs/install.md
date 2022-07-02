@@ -15,7 +15,7 @@ sidebar_position: 2
 * Add Glue as a dependency in your `wally.toml` file.
 ```toml
 [dependencies]
-Glue = "afrxo/glue@^5.0.1"
+Glue = "afrxo/glue@^5.0.2"
 ```
 
 ## Method 4 - Roblox Studio
