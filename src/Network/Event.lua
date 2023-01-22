@@ -19,6 +19,7 @@ local isClient = RunService:IsClient()
     @within Network
     .OnEvent (NetworkEvent, ...Middleware) -> ()
     .Fire (NetworkEvent, ...any) -> ()
+    .FireAll (...any) -> ()
 ]=]
 local Event = {}
 
@@ -50,9 +51,21 @@ function Event.new(Name: string, asDependency: boolean?)
     ]]
     function New:Fire(...)
         if (isServer) then
-            self._remote:FireClient(select(1, ...), select(2, ...))
+            self._remote:FireClient(...)
         elseif (isClient) then
             self._remote:FireServer(...)
+        end
+    end
+
+    --[[
+
+        Fires the event to all clients. Only usable on Server.
+
+    ]]
+
+    function New:FireAll(...)
+        if (isServer) then
+            self._remote:FireAllClients(...)
         end
     end
 
