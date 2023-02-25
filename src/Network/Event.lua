@@ -19,7 +19,7 @@ local isClient = RunService:IsClient()
     @within Network
     .OnEvent (NetworkEvent, ...Middleware) -> ()
     .Fire (NetworkEvent, ...any) -> ()
-    .FireAll (...any) -> ()
+    .FireAll (NetworkEvent, ...any) -> ()
 ]=]
 local Event = {}
 

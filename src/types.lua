@@ -35,7 +35,7 @@ export type Middleware = ((...any) -> (...any))
 
 export type NetworkEvent = {
 	Fire: ((NetworkEvent, ...any) -> ()) & ((NetworkEvent, player: Player, ...any) -> ()),
-	FireAll: ((NetworkEvent, ...any) -> ()),
+	FireAll: (NetworkEvent, ...any) -> (),
 	OnEvent: (NetworkEvent, ...Middleware) -> (),
 }
 
