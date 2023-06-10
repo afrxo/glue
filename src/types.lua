@@ -50,40 +50,7 @@ export type Network = {
 	fromRemote: ((RemoteEvent) -> NetworkEvent) & ((RemoteFunction) -> NetworkFunction),
 }
 
-export type NetValue<T> = {
-	getValue: (NetValue<T>) -> T,
-	onDispatch: (NetValue<T>, (T) -> ()) -> (),
-	dispatch: (NetValue<T>, (T) -> T) -> (),
-}
-
---> Thread
-
-export type Thread = {
-	Wait: (Duration: number) -> number,
-	Spawn: (Task: thread | (...any) -> (), ...any) -> thread,
-	After: (Duration: number, Task: thread | (...any) -> (), ...any) -> (),
-}
-
 --> State
-
-export type Value<T> = {
-	Get: (Value<T>) -> T,
-	Set: (Value<T>, T) -> (),
-	Destroy: (Value<T>) -> (),
-}
-
-export type Tracker<T> = {
-	Destroy: (Tracker<T>) -> (),
-}
-
-export type Computed = {
-	Destroy: (Computed) -> (),
-}
-
-export type State = {
-	Value: <T>(initialValue: T) -> Value<T>,
-	Tracker: <T>(Value: Value<T>, Callback: (Value<T>) -> ()) -> Value<T>,
-}
 
 export type Map<T> = { [string]: T }
 export type Array<T> = { T }
@@ -137,13 +104,8 @@ export type Math = {
 	SmootherStep: (a: number, b: number, t: number) -> number,
 }
 
-export type MathLoader = ("Math") -> Math
-export type StateLoader = ("State") -> State
-export type ThreadLoader = ("Thread") -> Thread
-export type NetValueLoader = ("NetValue") -> (<T>(string) -> NetValue<T>)
-export type ComponentsLoader = ("Components") -> Components
-
 export type Glue = {
+	Math: Math,
 	Version: string,
 	LocalPlayer: Player,
 	Network: Network,
@@ -152,7 +114,6 @@ export type Glue = {
 	GetProvider: (Name: string) -> Provider?,
 	Import: (Target: string | ModuleScript) -> any,
 	loader: (Target: Instance, Seperator: string?) -> ((Path: string) -> any),
-	loadLibrary: MathLoader & StateLoader & ThreadLoader & NetValueLoader & ComponentsLoader,
 	Provider: <T>(ProviderDefinition: T) -> Provider & T,
 	Extensions: (Extensions: { [string]: ((Provider) -> ()) }) -> (),
 	Imports: (Paths: { Instance } | Instance) -> (),
