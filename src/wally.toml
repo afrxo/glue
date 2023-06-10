@@ -1,11 +1,11 @@
 [package]
 name = "afrxo/glue"
 description = "Another game framework."
-version = "5.1.4"
+version = "6.1.4"
 license = "MIT"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
-exclude = ["src/wally.toml"]
+include = ["src", "default.project.json", "bundle.project.json", "LICENSE"]
 
 [dependencies]
 Promise = "evaera/promise@4.0.0"
