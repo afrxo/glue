@@ -13,16 +13,13 @@ local Version = script:WaitForChild("Version")
 local PubTypes = require(script:WaitForChild("types"))
 
 export type Glue = PubTypes.Glue
-export type Math = PubTypes.Math
 
+export type Math = PubTypes.Math
 export type Network = PubTypes.Network
 export type Middleware = PubTypes.Middleware
 export type NetworkEvent = PubTypes.NetworkEvent
 export type NetworkFunction = PubTypes.NetworkFunction
 
-export type Value<T> = PubTypes.Value<T>
-export type Tracker<T> = PubTypes.Tracker<T>
-export type State = PubTypes.State
 export type Provider = PubTypes.Provider
 export type Map<T> = PubTypes.Map<T>
 export type Array<T> = PubTypes.Array<T>
@@ -33,6 +30,7 @@ local glueUtil = require(script:WaitForChild("glueUtil"))
 local Packages = script.Parent
 local Promise = require(Packages:WaitForChild("Promise"))
 
+local Math = require(script:WaitForChild("Math"))
 local Network = require(script:WaitForChild("Network"))
 local createLoader = require(script:WaitForChild("loader"))
 local importPackage = require(script:WaitForChild("import"))
@@ -43,14 +41,6 @@ local sharedState = require(script:WaitForChild("sharedState"))
 local executeGlue = require(script:WaitForChild("executeGlue"))
 
 local GlueStickContext
-
-local loadLibrary = function(Name: string)
-	local Target = Packages:WaitForChild(Name, 5)
-	if not Target then
-		Error.throw(Error.new("libraryNotFound", Name))
-	end
-	return require(Target)
-end
 
 local function createGlueApi()
 	--[=[
@@ -99,6 +89,13 @@ local function createGlueApi()
 		```
 	]=]
 	Glue.loader = createLoader
+	--[=[
+		@prop Math Math
+		@within Glue
+
+		The Glue Math library.
+	]=]
+	Glue.Math = Math
 	--[=[
 
 		@prop Network Network
@@ -177,15 +174,6 @@ local function createGlueApi()
 		end
 
 		return glueManager.GetProvider(Name)
-	end
-	--[=[
-
-		@param Name string
-		@return Math | NetValue | Network | State | Thread | Promise
-
-	]=]
-	function Glue.loadLibrary(Name: string)
-		return loadLibrary(Name)
 	end
 	--[=[
 
