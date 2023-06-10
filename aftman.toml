@@ -1,3 +1,4 @@
 [tools]
 rojo = "quenty/rojo@7.3.0-quenty-npm-canary.7"
 wally = "UpliftGames/wally@0.3.2"
+lune = "filiptibell/lune@0.6.7"

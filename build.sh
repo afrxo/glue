@@ -1,6 +1,9 @@
 #!/bin/bash
 
 project=bundle.project.json
-output=Glue.rbxm
+project_output=bundle.rbxl
+output=Glue
 
-rojo build $project -o $output
+rojo build $project -o $project_output
+lune build $project_output $output
+echo "Built $output.rbxm"
