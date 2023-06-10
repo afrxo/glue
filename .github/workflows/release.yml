@@ -27,12 +27,24 @@ jobs:
       - name: Install Aftman Tools
         uses: ok-nick/setup-aftman@v0.3.0
 
+      - name: Install Wally Packages
+        run: wally install --project-path src
+
+      - name: Build File
+        run: bash build.sh
+
       - name: Set Version
         id: set_version
         run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
 
-      - name: Build File
-        run: bash build.sh
+      - name: Set Source Version
+        run: echo ${GITHUB_REF#refs/tags/} > src/version.txt
+
+      - name: Login Wally
+        run: wally login --project-path src --token "$WALLY_AUTH_TOKEN"
+
+      - name: Publish Wally Package
+        run: wally publish
         
       - name: Publish Github Release
         uses: softprops/action-gh-release@v1
