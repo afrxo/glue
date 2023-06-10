@@ -38,7 +38,7 @@ jobs:
         run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
 
       - name: Set Source Version
-        run: echo ${GITHUB_REF#refs/tags/} > src/version.txt
+        run: echo ${GITHUB_REF#refs/tags/} > src/Version.txt
 
       - name: Login Wally
         run: wally login --project-path src --token "$WALLY_AUTH_TOKEN"
@@ -48,8 +48,8 @@ jobs:
         
       - name: Publish Github Release
         uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
         with:
           name: Release ${{ steps.set_version.outputs.VERSION }}
-          body: CHANGELOG.md
           files: Glue.rbxm
 
