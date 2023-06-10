@@ -5,8 +5,6 @@ on:
   push:
     branches:
       - master
-    tags:
-      - 'v*'
     
 jobs:
   build:
@@ -33,23 +31,28 @@ jobs:
       - name: Build File
         run: bash build.sh
 
-      - name: Set Version
-        id: set_version
-        run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
+      - name: Get Release from wally.toml
+        uses: SebRollen/toml-action@v1.0.0
+        id: read_toml
+        with: 
+          file: 'src/wally.toml'
+          field: 'package.version'
 
       - name: Set Source Version
-        run: echo ${GITHUB_REF#refs/tags/} > src/Version.txt
+        run: echo ${{ steps.read_toml.outputs.value }} > src/Version.txt
 
-      - name: Login Wally
-        run: wally login --project-path src --token "$WALLY_AUTH_TOKEN"
+      - name: Publish to Wally
+        env: 
+          WALLY_TOKEN: ${{ secrets.WALLY_AUTH }}
+        run: |
+          mkdir =p ~/.wally
+          printf "[tokens]\n\"https://api.wally.run/\" = \"%s\"" "$WALLY_TOKEN" >> ~/.wally/auth.toml
+          wally publish
 
-      - name: Publish Wally Package
-        run: wally publish --project-path src
-        
-      - name: Publish Github Release
+      - name: Release
         uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
-        with:
-          name: Release ${{ steps.set_version.outputs.VERSION }}
+        with: 
+          name: ${{ steps.read_toml.outputs.value }}
+          tag_name: ${{ steps.read_toml.outputs.value }}
+          generate_release_notes: true
           files: Glue.rbxm
-
