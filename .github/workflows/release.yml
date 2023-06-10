@@ -47,7 +47,7 @@ jobs:
         run: |
           mkdir =p ~/.wally
           printf "[tokens]\n\"https://api.wally.run/\" = \"%s\"" "$WALLY_TOKEN" >> ~/.wally/auth.toml
-          wally publish
+          wally publish --project-path src
 
       - name: Release
         uses: softprops/action-gh-release@v1
