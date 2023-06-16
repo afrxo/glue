@@ -41,13 +41,12 @@ elseif (isClient) then
 end
 
 function Network:MakeMiddlewareFactory(Signal)
-    local function RunMiddlewareChain(...)
-        local Index = 0
-        local GlobalIndex = 1
-        local IncomingMiddleware = self:GetIncomingMiddleware()
-        local Callbacks = Signal._callbacks
+    local Index = 0
+    local GlobalIndex = 1
+    local IncomingMiddleware = self:GetIncomingMiddleware()
 
-        local RootNode = IncomingMiddleware[1] or Signal._callbacks[1]
+    local function runCallbacks(Callbacks, args)
+        local RootNode = IncomingMiddleware[1] or Callbacks[1]
 
         if (not RootNode) then return end
 
@@ -69,19 +68,23 @@ function Network:MakeMiddlewareFactory(Signal)
         end
 
         if (IncomingMiddleware[1]) then
-            return RootNode(Next, Signal.Name, {...})
+            return RootNode(Next, Signal.Name, args)
         else
             if (#Callbacks == 1) then
-                return RootNode(...)
+                return RootNode(table.unpack(args))
             else
                 Index = 1
-                return RootNode(Next, ...)
+                return RootNode(Next, table.unpack(args))
             end
         end
     end
 
     return function (...)
-        return RunMiddlewareChain(...)
+        runCallbacks(Signal._callbacks, {...})
+
+        for _, connection in Signal._connections do
+            runCallbacks(connection.callbacks, {...})
+        end
     end
 end
 
@@ -131,6 +134,7 @@ end
 function Network:BuildNetworkEvent(Event)
     Event._remote = self:BuildRemoteFromName(Event.Name, getmetatable(Event) :: string)
     Event._callbacks = {}
+    Event._connections = {}
 
     if (isServer) then
         Event._remote.OnServerEvent:Connect(self:MakeMiddlewareFactory(Event))

@@ -18,6 +18,7 @@ export type Math = PubTypes.Math
 export type Network = PubTypes.Network
 export type Middleware = PubTypes.Middleware
 export type NetworkEvent = PubTypes.NetworkEvent
+export type EventConnection = PubTypes.EventConnection
 export type NetworkFunction = PubTypes.NetworkFunction
 
 export type Provider = PubTypes.Provider
