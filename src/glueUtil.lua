@@ -67,7 +67,25 @@ function generateGuid(wrapInCurlyBraces: boolean?)
 	return HttpService:GenerateGUID(wrapInCurlyBraces)
 end
 
+-- Merge multiple tables
+function with(...)
+	local function merge(t1, t2)
+		for k, v in pairs(t2) do t1[k] = v end
+	end
+
+	local init = {}
+	for _, v in {...} do
+		if (type(v) == "table") then
+			merge(init, v)
+		else
+			init[#init+1] = v
+		end
+	end
+	return init
+end
+
 return {
+	with = with,
 	readOnly = readOnly,
 	getPlatform = getPlatform,
 	getInstance = getInstance,
