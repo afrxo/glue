@@ -32,11 +32,17 @@ export type Components = {
     @within Network
 ]=]
 export type Middleware = ((...any) -> (...any))
+export type EventConnection = {
+	Connected: boolean,
+	Disconnect: (EventConnection) -> ()
+}
 
 export type NetworkEvent = {
 	Fire: ((NetworkEvent, ...any) -> ()) & ((NetworkEvent, player: Player, ...any) -> ()),
+	Once: (NetworkEvent, ...Middleware) -> EventConnection,
 	FireAll: (NetworkEvent, ...any) -> (),
 	OnEvent: (NetworkEvent, ...Middleware) -> (),
+	Connect: (NetworkEvent, ...Middleware) -> EventConnection,
 }
 
 export type NetworkFunction = {
