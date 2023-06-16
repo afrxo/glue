@@ -1,5 +1,6 @@
 -- glueUtil.lua
 -- Utility functions for the glue library.
+local HttpService = game:GetService("HttpService")
 
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
@@ -61,10 +62,16 @@ function getLocalPlayer()
 	return Players.LocalPlayer
 end
 
+-- Generate a guid
+function generateGuid(wrapInCurlyBraces: boolean?)
+	return HttpService:GenerateGUID(wrapInCurlyBraces)
+end
+
 return {
 	readOnly = readOnly,
 	getPlatform = getPlatform,
 	getInstance = getInstance,
+	generateGuid = generateGuid,
 	getEnvironment = getEnvironment,
-	getLocalPlayer = getLocalPlayer
+	getLocalPlayer = getLocalPlayer,
 }
