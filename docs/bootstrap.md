@@ -17,7 +17,7 @@ Here's how they'd look like:
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local ServerScriptService = game:GetService("ServerScriptService")
 
-local Glue = require(ReplicatedStorage.Packages.Glue)
+local Glue = require(ReplicatedStorage.Wally.Glue)
 
 local Providers = script
 local SharedModules = ReplicatedStorage.Shared
@@ -48,7 +48,7 @@ end)
 local StarterPlayer = game:GetService("StarterPlayer")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local Glue = require(ReplicatedStorage.Packages.Glue)
+local Glue = require(ReplicatedStorage.Wally.Glue)
 
 local Providers = script
 local ClientModules = StarterPlayer.Modules
