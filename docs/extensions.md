@@ -22,9 +22,8 @@ Glue.Extensions({
     end
 })
 ```
-Here's an example:
 
-## Service Bag
+## Service Bag - Extenstion
 
 Eliminate usage of `Glue.GetProvider` and load dependent providers directly into the service bag.
 
