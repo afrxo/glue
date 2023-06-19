@@ -6,14 +6,16 @@ sidebar_position: 3
 
 Here's how to start Glue:
 ```lua
-local Glue = require(game:GetService("ReplicatedStorage").Glue)
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Glue = require(ReplicatedStorage.Wally.Glue)
 
 Glue.Stick()
 ```
 
 Here's how to start Glue and **additionally** catch any execution errors, using [Promises](https://eryn.io/roblox-lua-promise):
 ```lua
-local Glue = require(game:GetService("ReplicatedStorage").Glue)
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Glue = require(ReplicatedStorage.Wally.Glue)
 
 Glue.Stick():catch(warn)
 ```
@@ -33,10 +35,11 @@ Glue.Stick -> Provider.onCreate & yield -> Provider.onStart -> Glue.OnStick
 Here is how to create and start provider:
 
 ```lua
-local Glue = require(game:GetService("ReplicatedStorage").Glue)
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Glue = require(ReplicatedStorage.Wally.Glue)
 
 -- Creating the Provider
-local ExampleProvider = Glue.Provider( { Name = "ExampleProvider" } )
+local ExampleProvider = Glue.Provider({ Name = "ExampleProvider" })
 
 -- Attaching the onCreate lifeycle method
 function ExampleProvider:onCreate()
