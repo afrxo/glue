@@ -8,14 +8,16 @@ Glue allows for a modular approach at writing netcode by removing the necessity 
 
 1. **Server**
 ```lua
-local Glue = require(game:GetService("ReplicatedStorage").Glue)
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Glue = require(ReplicatedStorage.Wally.Glue)
+
 local Network = Glue.Network
 
 -- Create the NetworkEvent
 local Signal = Network.Event("ExampleSignal")
 
 -- Listen to any client events
-Signal:OnEvent(function(Player: Player)
+local Connection = Signal:Connect(function(Player: Player)
 	print("Ping")
     -- Fire an event to the client
 	Signal:Fire(Player)
@@ -24,14 +26,15 @@ end)
 
 2. **Client**
 ```lua
-local Glue = require(game:GetService("ReplicatedStorage").Glue)
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Glue = require(ReplicatedStorage.Wally.Glue)
 local Network = Glue.Network
 
 -- Wait for the RemoteSignal to 
 local Signal = Network.Event("ExampleSignal")
 
 -- Listen to events from the server
-Signal:OnEvent(function()
+local Connection = Signal:Connect(function()
 	print("Pong")
 end)
 
@@ -43,7 +46,8 @@ Signal:Fire()
 
 What is a middleware? A middleware is an operation or task, that lies between two processes. Middlewares might be useful for cutting down on tasks required by multiple endpoints. Middlewares are embedded as simple functions in Glue, here's a classic example: We would like to log any requests made to an event endpoint, here's how it would look like in Glue:
 ```lua
-local Glue = require(game:GetService("ReplicatedStorage").Glue)
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Glue = require(ReplicatedStorage.Wally.Glue)
 local Network = Glue.Network
 
 local Signal = Network.Event("ExampleSignal")
@@ -53,14 +57,15 @@ local LoggerMiddleware = function(Next, Player, ...)
 	Next(Player, ...)
 end
 
-Signal:OnEvent(LoggerMiddleware, function(Player, ...)
+local Connection = Signal:Connect(LoggerMiddleware, function(Player, ...)
 	DoSomething(Player, ...)
 end)
 ```
 
 The same concept is applicable to NetworkFunctions, the next statement must simply return any values that need to be sent back:
 ```lua
-local Glue = require(game:GetService("ReplicatedStorage").Glue)
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Glue = require(ReplicatedStorage.Wally.Glue)
 local Network = Glue.Network
 
 local Signal = Network.Function("ExampleSignal")
