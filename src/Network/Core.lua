@@ -70,7 +70,7 @@ function Network:MakeMiddlewareFactory(Signal)
 
     return function (...)
         if (#Signal._callbacks >= 1) then
-            runCallbacks(Signal._callbacks, {...})
+            return runCallbacks(Signal._callbacks, {...})
         end
 
         if (Signal._connections) then
