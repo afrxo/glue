@@ -73,8 +73,10 @@ function Network:MakeMiddlewareFactory(Signal)
             runCallbacks(Signal._callbacks, {...})
         end
 
-        for _, connection in Signal._connections do
-            runCallbacks(connection.callbacks, {...})
+        if (Signal._connections) then
+            for _, connection in Signal._connections do
+                runCallbacks(connection.callbacks, {...})
+            end
         end
     end
 end
