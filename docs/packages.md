@@ -15,9 +15,8 @@ end
 
 2. **Bootstrap-Server** `ServerScriptService/Bootstrap.server.lua`
 ```lua
-local Glue = require(game:GetService("ReplicatedStorage").Glue)
-
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Glue = require(ReplicatedStorage.Wally.Glue)
 
 Glue.Imports(ReplicatedStorage.Shared)
 
@@ -44,7 +43,8 @@ return "Hello"
 
 2. **MakeHello** `ReplicatedStorage/Shared/MakeHello.lua`
 ```lua
-local Glue = require(game:GetService("ReplicatedStorage").Glue)
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Glue = require(ReplicatedStorage.Wally.Glue)
 
 local Hello = Glue.Import("Shared/Hello")
 
@@ -58,7 +58,9 @@ end
 Glue allows the construction of a module loader, that only searches for modules in a specified directory. This is useful for loading a packages submodules / dependencies relative to itself.
 
 ```lua
-local require = require(game:GetService("ReplicatedStorage").Glue).loader(script)
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Glue = require(ReplicatedStorage.Wally.Glue)
+local require = require(Glue).loader(script)
 
 local Util = require("Util")
 
