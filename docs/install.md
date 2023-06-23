@@ -8,7 +8,7 @@ sidebar_position: 2
 * Add Glue as a dependency in your `wally.toml` file.
 ```toml
 [dependencies]
-Glue = "afrxo/glue@^7.1.0"
+Glue = "afrxo/glue@7.1.1"
 ```
 
 ## Method 2 - Manual
