@@ -42,45 +42,36 @@ end
 
 function Network:MakeMiddlewareFactory(Signal)
     local Index = 0
-    local GlobalIndex = 1
-    local IncomingMiddleware = self:GetIncomingMiddleware()
 
     local function runCallbacks(Callbacks, args)
-        local RootNode = IncomingMiddleware[1] or Callbacks[1]
+        local RootNode = Callbacks[1]
 
         if (not RootNode) then return end
 
         local function Next(...)
-            if (GlobalIndex >= #IncomingMiddleware) or (#IncomingMiddleware == 0) then
-                Index = Index + 1
-                if (Index > #Callbacks) or (#Callbacks == 0) then
-                    return
-                end
-                if (Index == #Callbacks) then
-                    return Callbacks[Index](...)
-                else
-                    return Callbacks[Index](Next, ...)
-                end
+            Index = Index + 1
+            if (Index > #Callbacks) or (#Callbacks == 0) then
+                return
+            end
+            if (Index == #Callbacks) then
+                return Callbacks[Index](...)
             else
-                GlobalIndex = GlobalIndex + 1
-                return IncomingMiddleware[GlobalIndex](Next, Signal.Name, {...})
+                return Callbacks[Index](Next, ...)
             end
         end
 
-        if (IncomingMiddleware[1]) then
-            return RootNode(Next, Signal.Name, args)
+        if (#Callbacks == 1) then
+            return RootNode(table.unpack(args))
         else
-            if (#Callbacks == 1) then
-                return RootNode(table.unpack(args))
-            else
-                Index = 1
-                return RootNode(Next, table.unpack(args))
-            end
+            Index = 1
+            return RootNode(Next, table.unpack(args))
         end
     end
 
     return function (...)
-        runCallbacks(Signal._callbacks, {...})
+        if (#Signal._callbacks >= 1) then
+            runCallbacks(Signal._callbacks, {...})
+        end
 
         for _, connection in Signal._connections do
             runCallbacks(connection.callbacks, {...})
